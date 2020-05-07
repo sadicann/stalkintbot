@@ -14,9 +14,12 @@ const bot = new Telegraf("1178059287:AAGfxUCHuTMUbuznleptsNoZioOvXdKN5Gc")
 bot.use(commandParts())
 
 bot.startPolling()
-bot.start((ctx) => ctx.replyWithMarkdown(`*.:STALKINT BOT:.*
-🔥 Fotoğraf araştırması için bir fotoğraf gönderin.
-`))
+bot.start((ctx) => { 
+    ctx.replyWithMarkdown(`*.:STALKINT BOT:.*
+    🔥 Fotoğraf araştırması için bir fotoğraf gönderin.
+    `) 
+    console.log("Yeni kullanici")
+})
 bot.command('twitter', ctx =>  { 
     if (ctx.state.command.args) { 
         ctx.reply(ctx.state.command.args) 
@@ -34,6 +37,7 @@ bot.launch()
 
 const reverseSearch = async ctx => {
     try {
+        console.log("Yeni fotograf arastirmasi yapiliyor")
         ctx.reply("Ters görsel araması başlatılıyor..")
     let link = await ctx.telegram.getFileLink(ctx.message.photo[0].file_id)
         request({ url: 'https://www.google.com.tr/searchbyimage?image_url=' + link, method: 'GET', headers: headers },  (error, response, body) => { 
