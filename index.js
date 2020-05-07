@@ -1,8 +1,5 @@
 const { Telegraf } = require('telegraf')
 const { Router, Markup } = Telegraf
-const TelegrafInlineMenu = require('telegraf-inline-menu')
-const axios = require('axios').default;
-const getUrls = require('get-urls');
 var request = require('request');
 var he = require('he');
 const { parse } = require('node-html-parser');
