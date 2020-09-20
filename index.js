@@ -11,7 +11,7 @@ const headers = {
 
 const apiKey = "XXXXX"
 
-const bot = new Telegraf("XXXX")
+const bot = new Telegraf(apiKey)
 
 bot.use(commandParts())
 
