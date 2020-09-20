@@ -9,7 +9,9 @@ const headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0'
 }
 
-const bot = new Telegraf("1178059287:AAGfxUCHuTMUbuznleptsNoZioOvXdKN5Gc")
+const apiKey = "XXXXX"
+
+const bot = new Telegraf("XXXX")
 
 bot.use(commandParts())
 
